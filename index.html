@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+      *{
+        box-sizing: border-box;
+        padding: 0%;
+        margin: 0%;
+      }
+      html,body{
+        overflow-x:hidden;
+      }
+     .parent{
+      width:100%;
+      height:80vh;
+     }
+     .child1{
+      position:fixed;
+      top:0%;
+      z-index:1;
+      width:98%;
+      height:10vh;
+      background-color:aliceblue;
+      display:flex;
+     }
+     .child1img>img{
+      width:35%;
+      margin-left: 30%;
+     }
+     .child1a{
+      width:45%;
+      margin-right: 0%;
+     }
+     sup{
+      color:rgb(243, 19, 57);
+     }
+     .child1a>a{
+      text-align: center;
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+      margin-left: 3%;
+      
+     }
+     .child1b{
+      width:35%;
+      background-color:aliceblue;
+      margin-left: 0%;
+      margin-top:0.5%;
+     }
+     .child1b>i{
+      margin-left: 1%;
+      margin-right: 1%;
+     }
+     .child1b>input{
+      width:80%;
+      
+     }
+     input:focus{
+      outline:none;
+     }
+     .child1c{
+      display: flex;
+      width:30%;
+      margin-top:0%;
+     }
+     .child1c>figure{
+      flex-basis:inherit;
+     }
+     .child1c>.user,.child1c>.bag,.child1c>.heart{
+      margin-right: 1%;
+     }
+     .menu-bar {
+     display: none;
+     }
+
+    .hamburger {
+    display: none;
+    cursor: pointer;
+     }
+
+     .BELOWHEADER{
+      WIDTH:90%;
+      DISPLAY:FLEX;
+      MARGIN:AUTO;
+      justify-content: center;
+      
+      
+     }
+
+     .BELOWHEADER1{
+      WIDTH:30%;
+      BORDER:1PX SOLID BLACK;
+      border: 20%;
+      border-top-right-radius:var(20%);
+      justify-items: center;
+      border-top-right-radius: 20%;
+      border-bottom-right-radius: 20%;
+     }
+     .BELOWHEADER2{
+      WIDTH:30%;
+      background-color:cadetblue;
+      BORDER:1PX SOLID BLACK;
+      BORDER-LEFT:DOTTED;
+      justify-items: center;
+      border-top-left-radius: 20%;
+      border-bottom-left-radius: 20%;
+     }
+     .MEDALWORTHY{
+      DISPLAY:FLEX;
+      TRANSITION-DURATION:2S;
+     }
+    
+     
+     section>div:HOVER{
+      TRANSFORM:SCALE(1.3,1.3);
+     }
+     .BELOWHEADER:hover{
+      transform:scale(1.3,1.3)
+     }
+     .c-item{
+    height:100vh;
+    
+  }
+  .c-img{
+    height:100vh;
+    
+    object-fit:cover;
+
+  }
+  .OK{
+    DISPLAY:FLEX;
+    GAP:5%;
+    
+  }
+  .OK>DIV{
+    flex-basis: 50%;
+  }
+    DIV>H2{
+      text-align: center;
+      justify-self:CENTER;
+    } 
+   footer{
+    display:flex;
+    gap:10%;
+    flex-basis:50%;
+   }
+   .foot3>a{
+    text-decoration: none;
+    color:black;
+   }
+   .MEDALWORTHY{
+    gap:2%;
+   }
+   .shopbycategory {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px; 
+
+}
+
+.shopbycategory img {
+  width: 100%; 
+  height: auto; 
+}
+   .foots {
+  display: flex;
+  gap: 5%; 
+  justify-content: space-between;
+   } 
+
+.foots > div {
+  flex: 1;
+}
+.foot1, .foot2, .foot3, .foot4 {
+  padding: 10px;
+}
+
+/* Font adjustments */
+.foot1 p, .foot2 p, .foot3 p, .foot4 p {
+  margin: 5px 0;
+}
+   
+/* Default Grid Layout for larger screens */
+
+
+
+@media screen and(max-width: 1200px) {
+  .shopbycategory {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+  .foots {
+    gap: 3%; /* Reduce the gap for large tablets */
+  }
+
+  .foots > div {
+    flex: 1; /* Keep each div equal in width */
+  }
+}
+
+/* Media Query for screens with a max-width of 992px (tablets) */
+@media screen and (max-width: 992px) {
+  .shopbycategory {
+    grid-template-columns: repeat(3, 1fr); 
+    
+  }
+  .foots {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for tablet screens */
+    gap: 20px; /* Increased gap for more breathing space */
+  }
+}
+
+/* Media Query for screens with a max-width of 768px (small tablets, large phones) */
+@media screen and (max-width: 768px) {
+  .child1a {
+    display: none; /* Hide the nav menu on small screens */
+  }
+
+  .child1b {
+    width: 70%; /* Adjust width of the search bar */
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .menu-bar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: aliceblue;
+    padding: 20px;
+    text-align: center;
+    display: none; /* Initially hidden */
+    flex-direction: column;
+  }
+
+  .menu-bar a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+
+/* Show menu when mobile hamburger icon is clicked */
+.menu-bar.show {
+  display: flex;
+}
+  .shopbycategory {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets/large phones */
+  }
+  .foots {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+  }
+
+  /* Adjust the font size and padding for smaller screens */
+  .foot1 p, .foot2 p, .foot3 p, .foot4 p {
+    font-size: 14px;
+  }
+}
+
+/* Media Query for screens with a max-width of 576px (phones) */
+@media screen and (max-width: 576px) {
+  .shopbycategory {
+    grid-template-columns: 1fr; /* 1 column for mobile screens */
+    gap: 10px; /* Adjust gap for mobile */
+  }
+  /*.foots {
+    grid-template-columns: 1fr; /* Stack footer items in a single column */
+    gap: 10px; /* Smaller gap for mobile */
+  
+
+  .foot1, .foot2, .foot3, .foot4 {
+    padding: 5px; /* Reduce padding for mobile */
+  }
+
+  .foot3 {
+    text-align: center; /* Center align social media links */
+  }
+
+  .foot4 {
+    font-size: 12px; /* Reduce font size for small screens */
+  }
+  
+}
+
+
+     
+        
+    </style>
+</head>
+<body>
+  <div class="parent">
+    <header class="child1">
+       <div class="child1img">
+         <img src="myntra_image.webp" alt="" width="10%" height="50vh">
+        </div>
+      <nav class="child1a">
+      <a href="#mens">Men</a>
+      <a href="#womens">Women</a>
+      <a href="#kids">Kids</a>
+      <a href="#home">Home&Living</a>
+      <a href="#womens">Beauty</a>
+      <a href="#home">Studio<sup >New</sup></a>
+      </nav>
+      <div class="child1b">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search for products and brands and more">
+      </div>
+      <div class="child1c">
+          <figure class="user">
+            <i class="fa-regular fa-user" id="user"></i>
+            <figcaption>Profile</figcaption>
+          </figure>
+          <figure class="heart">
+            <i class="fa-regular fa-heart" id="heart"></i>
+            <figcaption>Wishlist</figcaption>
+          </figure>
+          <figure class="bag">
+            <i class="fa-solid fa-bag-shopping" id="bag"></i>
+            <figcaption>Bag</figcaption>
+          </figure>
+      </div>
+      <div class="menu-bar">
+        <a href="#mens">Men</a>
+        <a href="#womens">Women</a>
+        <a href="#kids">Kids</a>
+        <a href="#home">Home&Living</a>
+        <a href="#womens">Beauty</a>
+        <a href="#home">Studio<sup>New</sup></a>
+      </div>
+    </header>
+    <script>
+      function toggleMenu() {
+        var menu = document.querySelector('.menu-bar');
+        menu.classList.toggle('show');
+      }
+    </script>
+    <BR><BR><br><br>
+    <main>
+      <DIV CLASS="BELOWHEADER" id="home">
+       <div CLASS="BELOWHEADER1">
+        <p>NEW USER</p>
+        <p>GET 40% OFF</p>
+        <p>UP TO RS 300 OFF</p>
+      </div>
+      <DIV CLASS="BELOWHEADER2">
+        <p>CODE</p>
+        <p style="background-color: white;">MYNTRASAVE</p>
+      </DIV>
+      </DIV>
+      <br><br>
+      <DIV CLASS="OK" id="kids">
+      <div id="carouselExampleIndicators" class="carousel slide ">
+        <div class="carousel-indicators  ">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active c-item">
+            <img src="horse_dress.jpg" class="d-block w-100 c-img" alt="...">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="bag.jpg" class="d-block w-100 c-img" alt="...">
+          </div>
+          <div class="carousel-item c-item">
+            <img src="jogging_person.jpg" class="d-block w-100 c-img" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+        <DIV>
+          <H2>THESE BEST ITEMS </H2>
+          <H2>ARE FOR YOU ONLY</H2>
+          <br>
+          <br>
+          <h2>DONT WASTE YOUR VALUABLE TIME </h2>
+          <H2>JUST ORDER THE ITEM</H2>
+          <BR>
+          <BR>
+           <H2>OFFERS WILL GONE</H2>
+        </DIV>
+      </DIV>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    
+      <H2>MEDAL WORTHY BRANDS TO BAGS</H2>
+      <marquee direction="left" >
+      <section2 CLASS="MEDALWORTHY" id="mens">
+        
+        
+        <DIV><IMG SRC="1.png" ></IMG></DIV>
+        <DIV><IMG SRC="2.png"></IMG></DIV>
+        <DIV><IMG SRC="3.png"></IMG></DIV>
+        <DIV><IMG SRC="4.png"></IMG></DIV>
+        <DIV><IMG SRC="5.png"></IMG></DIV>
+        <DIV><IMG SRC="6.png"></IMG></DIV>
+        <DIV><IMG SRC="7.png"></IMG></DIV>
+        <DIV><IMG SRC="8.png"></IMG></DIV>
+        <DIV><IMG SRC="9.png"></IMG></DIV>
+        <DIV><IMG SRC="10.png"></IMG></DIV>
+        <DIV><IMG SRC="11.png"></IMG></DIV>
+        <DIV><IMG SRC="12.png"></IMG></DIV>
+      </section2></marquee>
+      <br>
+      <H2>SHOP BY CATEGORY</H2>
+      <section class="shopbycategory" id="womens">
+        <div class="shop1"><img src="categories/1.jpg" alt=""></div>
+        <div class="shop2"><img src="categories/2.jpg" alt=""></div>
+        <div class="shop3"><img src="categories/3 (1).jpg" alt=""></div>
+        <div class="shop4"><img src="categories/4.jpg" alt=""></div>
+        <div class="shop5"><img src="categories/5.jpg" alt=""></div>
+        <div class="shop6"><img src="categories/6.jpg" alt=""></div>
+        <div class="shop7"><img src="categories/7.jpg" alt=""></div>
+        <div class="shop8"><img src="categories/8.jpg" alt=""></div>
+        <div class="shop9"><img src="categories/9.jpg" alt=""></div>
+        <div class="shop10"><img src="categories/10.jpg" alt=""></div>
+      </section>
+    </main><br><br><br>
+     <footer1>
+      <div class="foots">
+      <div class="foot1"><strong>ONLINE SHOPPING</strong><br><br>
+      <P>Men</P>
+      <P>Women</P>
+      <P>Kids</P>
+      <P>Home&Living</P>
+      <P>Beauty</P>
+      <P>Gift Cards</P>
+      <p>Myntra Insider</p>
+      </div>
+      <div class="foot2"><strong>Customer Policies</strong><br><br>
+      <p>Contact Us</p>
+      <p>FAQ</p>
+      <p>T&C</p>
+      <p>Terms Of Use</p>
+      <p>Track Orders</p>
+      <p>Shipping</p>
+      <p>Cancellation</p>
+      <p>Returns</p>
+      <p>Privacy Policy</p>
+      <p>Grievance Redressal</p>
+      </div>
+      <div class="foot3">
+        <strong>Experience  Myntra App On Mobile</strong><br><br>
+        <p>Keep In Touch</p>
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <div class="foot4">
+        <p><i class="fa-solid fa-award"></i>    <strong>100% Original gaurantee</strong> for all products at mynta.com</p>
+      <p><i class="fa-solid fa-rotate-left"></i>   <strong>Returns Within 14 Days</strong> of recieving your order</p>
+    </div> 
+  </div>
+    </footer1>
+    <footer2>
+    <hr>
+      <div class="foot5"><strong>Popular Search</strong>
+      <p>Make Up | Dress For Girls | T-Shirts | Sandals | Headphones | BabyDolls | HandBags | Blazers for Mens | Lazy Watches | Bags | Puma Shoes | Boxers | Wallets | Tops | Earrings | Kurtis | Eye MakeUp | Photo Frames | Bikini | Jewellery | Designers Sarees | Woodland Shoes | Smart Watches |  Titan Watches |  Gowns | Rings | Nike | Dresses | Lehanga | Goggles | suit | Chinos |</p>
+    </div>
+    <hr><br>
+    <div><strong>Registered Office Address</strong><br><br>
+    <p>Building Alyssa,</p>
+    <p>Begonia and Clover situated in Embassy Tech Village,</p>
+    <p>Outer Ring Road,</p>
+    <p>Some Village,</p>
+    <p>Varthur Hobli,</p>
+    <p>Bengaluru – 560103, India</p>
+    <p>Telephone: +91-1234567890</p>
+    </div>
+    </footer2>
+  </div> 
+</body>
+</html>
